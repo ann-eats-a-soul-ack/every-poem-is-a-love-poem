@@ -38,7 +38,7 @@ function draw() {
     
     textFont("Garamond");
     textAlign(LEFT);
-    text(aLines[i], 200, y + i * 20);
+    text(aLines[i], 200, pos + i * 20);
   }
 
     for (var i = 0; i < pLines.length; i++) {
@@ -46,7 +46,7 @@ function draw() {
     
     textFont("Garamond");
     textAlign(RIGHT);
-    text(pLines[i], 1000, y + i * 20);
+    text(pLines[i], 1000, pos + i * 20);
   }
 }
 
@@ -73,5 +73,5 @@ function showResetButton() {
 }
 
 function resetPoem() {
-  y = 0;
+  pos = 0;
 }
