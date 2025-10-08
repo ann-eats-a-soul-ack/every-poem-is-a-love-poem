@@ -7,8 +7,7 @@ var aLines;
 var pLines;
 var button;
 let pos = 100;
-let bg;
-//let img;
+//let poem;
 var blur;
 var R, G, B;
 var restartText;
@@ -17,12 +16,9 @@ var playTest = false;
 function preload() {
   foodLines = loadStrings("anita.txt");
   moreLines = loadStrings("panda.txt");
-  poem = loadSound(
-    "Boiling.m4a"
-  );
-  bg = loadImage(
-    "IMG_1936.PNG"
-  );
+ // poem = loadSound(
+  //  "Boiling.m4a"
+ // );
 }
 
 function setup() {
@@ -103,10 +99,10 @@ function showPlayButton() {
   button.mousePressed(playPoem);
 }
 
-function playPoem() {
-  poem.play();
-  poem.setVolume(0.3);
-}
+//function playPoem() {
+ // poem.play();
+//  poem.setVolume(0.3);
+//}
 
 function showPauseButton() {
   button = createButton("pause reading pls");
@@ -122,9 +118,9 @@ function showPauseButton() {
   button.mousePressed(pausePoem);
 }
 
-function pausePoem() {
-  poem.pause();
-}
+//function pausePoem() {
+//  poem.pause();
+//}
 
 function showResetButton() {
   button = createButton("back 2 beginning pls");
