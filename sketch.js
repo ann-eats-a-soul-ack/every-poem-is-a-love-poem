@@ -1,4 +1,4 @@
-/* globals loadStrings loadSound log radians rotateY texture mouseIsPressed copyTouch handleStart handleMove bg touches createVideo bgLoad cursor loadImage createImage image createGraphics pixelDensity Hammer myHammer handlePan myElement myOptions cursor rectMode rect p5 showGlossary createCanvas windowWidth windowHeight height mouseX mouseY textFont random width background fill textSize textAlign LEFT RIGHT CENTER text mouseIsPressed createButton */
+/* globals loadStrings loadSound log length radians rotateY texture mouseIsPressed copyTouch handleStart handleMove bg touches createVideo bgLoad cursor loadImage createImage image createGraphics pixelDensity Hammer myHammer handlePan myElement myOptions cursor rectMode rect p5 showGlossary createCanvas windowWidth windowHeight height mouseX mouseY textFont random width background fill textSize textAlign LEFT RIGHT CENTER text mouseIsPressed createButton */
 
 //variables
 var y = [];
@@ -38,9 +38,6 @@ function draw() {
     for (var w = words.length - 1; w >= 0; w--) {
     words[w].display();
     words[w].move();
-    //  if (words[w].isOffScreen()) {
-    // words.splice(w, 1);
-    //  }
   }
     for(let y=0; y<height; y++){
     n = map(y,0,height,0,1);
