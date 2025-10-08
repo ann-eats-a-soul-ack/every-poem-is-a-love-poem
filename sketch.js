@@ -7,7 +7,7 @@ var aLines;
 var pLines;
 var button;
 let pos = 100;
-var blur;
+//var blur;
 var R, G, B;
 var restartText;
 let bg;
@@ -21,8 +21,8 @@ function preload() {
 function setup() {
 createCanvas(windowWidth, windowHeight);
   pixelDensity(1);
-  blur = createGraphics(windowWidth, windowHeight);
-  blur.clear();
+//  blur = createGraphics(windowWidth, windowHeight);
+//  blur.clear();
   // scrollPoem();
   resetPoem();
 }
