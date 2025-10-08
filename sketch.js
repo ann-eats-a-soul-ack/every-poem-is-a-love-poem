@@ -18,7 +18,6 @@ function preload() {
 function setup() {
 createCanvas(windowWidth, windowHeight);
   pixelDensity(1);
-  resetPoem();
 }
 
 function draw() {
