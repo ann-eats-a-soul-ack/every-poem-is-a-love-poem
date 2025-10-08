@@ -11,7 +11,7 @@ let pos = 100;
 var blur;
 var R, G, B;
 var restartText;
-var playTest = false;
+//var playTest = false;
 
 function preload() {
   foodLines = loadStrings("anita.txt");
@@ -29,15 +29,15 @@ function setup() {
   blur.clear();
   // scrollPoem();
   resetPoem();
-  playPoem();
-  pausePoem();
+//  playPoem();
+//  pausePoem();
 }
 
 function draw() {
-  background(bg);
+  background(255);
   showResetButton();
-  showPlayButton();
-  showPauseButton();
+//  showPlayButton();
+ // showPauseButton();
   
   fill(255);
   textSize(25);
@@ -84,43 +84,6 @@ function mouseWheel(event) {
   //uncomment to block page scrolling
   return false;
 }
-
-function showPlayButton() {
-  button = createButton("read 4 me pls");
-  //button.position(width - 250, 10, 65);
-  button.position(10, 150);
-
-  button.style("background-color", "transparent");
-  button.style("color", "rgb(255, 255, 255)");
-  button.style("font-size", "30pt");
-
-  button.style("border", "1px solid #326464");
-  button.style("border-radius", "5px");
-  button.mousePressed(playPoem);
-}
-
-//function playPoem() {
- // poem.play();
-//  poem.setVolume(0.3);
-//}
-
-function showPauseButton() {
-  button = createButton("pause reading pls");
-  //button.position(width - 250, 10, 65);
-  button.position(10, 200);
-
-  button.style("background-color", "transparent");
-  button.style("color", "rgb(255, 255, 255)");
-  button.style("font-size", "30pt");
-
-  button.style("border", "1px solid #326464");
-  button.style("border-radius", "5px");
-  button.mousePressed(pausePoem);
-}
-
-//function pausePoem() {
-//  poem.pause();
-//}
 
 function showResetButton() {
   button = createButton("back 2 beginning pls");
