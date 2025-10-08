@@ -7,37 +7,27 @@ var aLines;
 var pLines;
 var button;
 let pos = 100;
-//let poem;
 var blur;
 var R, G, B;
 var restartText;
-//var playTest = false;
 
 function preload() {
   foodLines = loadStrings("anita.txt");
   moreLines = loadStrings("panda.txt");
- // poem = loadSound(
-  //  "Boiling.m4a"
- // );
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
-  //poem.setVolume(1);
+createCanvas(windowWidth, windowHeight);
   pixelDensity(1);
   blur = createGraphics(windowWidth, windowHeight);
   blur.clear();
   // scrollPoem();
   resetPoem();
-//  playPoem();
-//  pausePoem();
 }
 
 function draw() {
   background(255);
   showResetButton();
-//  showPlayButton();
- // showPauseButton();
   
   fill(255);
   textSize(25);
