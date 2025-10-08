@@ -38,7 +38,7 @@ function draw() {
     
     textFont("Garamond");
     textAlign(LEFT);
-    text(aLines[i], 200, pos + i * 20);
+    text(aLines[i], 100, pos + i * 20);
   }
 
     for (var i = 0; i < pLines.length; i++) {
@@ -46,7 +46,7 @@ function draw() {
     
     textFont("Garamond");
     textAlign(RIGHT);
-    text(pLines[i], 1000, pos + i * 20);
+    text(pLines[i], 1300, pos + i * 20);
   }
 }
 
@@ -61,11 +61,11 @@ function mouseWheel(event) {
 function showResetButton() {
   button = createButton("back 2 beginning pls");
   //button.position(width - 250, 160, 65);
-  button.position(10, 100);
+  button.position(10, 70);
 
   button.style("background-color", "transparent");
   button.style("color", "rgb(255, 255, 255)");
-  button.style("font-size", "30pt");
+  button.style("font-size", "20pt");
 
   button.style("border", "1px solid #326464");
   button.style("border-radius", "5px");
