@@ -7,7 +7,6 @@ var aLines;
 var pLines;
 var button;
 let pos = 100;
-//var blur;
 var R, G, B;
 var restartText;
 let bg;
@@ -21,9 +20,6 @@ function preload() {
 function setup() {
 createCanvas(windowWidth, windowHeight);
   pixelDensity(1);
-//  blur = createGraphics(windowWidth, windowHeight);
-//  blur.clear();
-  // scrollPoem();
   resetPoem();
 }
 
@@ -42,7 +38,7 @@ function draw() {
     
     textFont("Garamond");
     textAlign(LEFT);
-    text(aLines[i], 200 + shake, y + i * 20 + shake);
+    text(aLines[i], 200, y + i * 20);
   }
 
     for (var i = 0; i < pLines.length; i++) {
@@ -50,7 +46,7 @@ function draw() {
     
     textFont("Garamond");
     textAlign(RIGHT);
-    text(pLines[i], 1000 + shake, y + i * 20 + shake);
+    text(pLines[i], 1000, y + i * 20);
   }
 }
 
