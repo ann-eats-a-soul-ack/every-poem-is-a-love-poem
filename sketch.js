@@ -35,6 +35,7 @@ function draw() {
   textSize(25);
   text('LEFT 4 SLOW', 10, 400);
   text('RIGHT 4 FAST', width - 170, 400);
+  text('every poem is a love poem', width / 2, 50);
 
   for (var i = 0; i < aLines.length; i++) {
     y = y - (mouseX / 1500) * 0.1;
