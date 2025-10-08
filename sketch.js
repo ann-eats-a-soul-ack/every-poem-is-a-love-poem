@@ -14,8 +14,8 @@ var restartText;
 let bg;
 
 function preload() {
-  foodLines = loadStrings("anita.txt");
-  moreLines = loadStrings("panda.txt");
+  aLines = loadStrings("anita.txt");
+  pLines = loadStrings("panda.txt");
   bg = loadImage("cloudy.jpg");
 }
 
