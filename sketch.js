@@ -36,37 +36,21 @@ function draw() {
   text('LEFT 4 SLOW', 10, 400);
   text('RIGHT 4 FAST', width - 170, 400);
 
-  for (var i = 0; i < pLines.length; i++) {
-    var shake = 0;
-    if (mouseIsPressed) {
-      shake = random(-10, 50);
-      R = random(100, 255);
-      G = random(100, 255);
-      B = random(100, 255);
-      fill(R, G, B);
-    }
-    blur.fill(R, G, B, 10);
-    blur.textAlign(RIGHT);
-    blur.textSize(35);
-    blur.textFont("Garamond");
-    blur.text(pLines[i], 350 + i + shake, pos + i * 20 + shake);
-  }
-  for (var i = 0; i < pLines.length; i++) {
-    blur.fill(245, 222, 179, 10);
-    blur.textAlign(RIGHT);
-    blur.textSize(25);
-    blur.text(pLines[i], 350, y + i * 20);
-  }
-  image(blur, 0, 0);
-
   for (var i = 0; i < aLines.length; i++) {
     y = y - (mouseX / 1500) * 0.1;
     
     textFont("Garamond");
     textAlign(LEFT);
-    text(aLines[i], 400 + shake, y + i * 20 + shake);
+    text(aLines[i], 200 + shake, y + i * 20 + shake);
   }
 
+    for (var i = 0; i < pLines.length; i++) {
+    y = y - (mouseX / 1500) * 0.1;
+    
+    textFont("Garamond");
+    textAlign(RIGHT);
+    text(pLines[i], 1000 + shake, y + i * 20 + shake);
+  }
 }
 
 function mouseWheel(event) {
