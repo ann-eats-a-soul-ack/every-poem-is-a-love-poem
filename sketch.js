@@ -11,11 +11,12 @@ let pos = 100;
 var blur;
 var R, G, B;
 var restartText;
-let c1,c2;
+let bg;
 
 function preload() {
   foodLines = loadStrings("anita.txt");
   moreLines = loadStrings("panda.txt");
+  bg = loadImage("cloudy.jpg");
 }
 
 function setup() {
@@ -25,13 +26,10 @@ createCanvas(windowWidth, windowHeight);
   blur.clear();
   // scrollPoem();
   resetPoem();
-  
- c1 = color(255);
-  c2 = color(30, 0, 255);
 }
 
 function draw() {
-//  background(255);
+ background(bg);
   showResetButton();
 
 
@@ -39,12 +37,6 @@ function draw() {
     words[w].display();
     words[w].move();
   }
-    for(let y=0; y<height; y++){
-    n = map(y,0,height,0,1);
-    let newc = lerpColor(c1,c2,n);
-    stroke(newc);
-    line(0,y,width, y);
-  }  
   
   fill(255);
   textSize(25);
