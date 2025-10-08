@@ -5,6 +5,7 @@ var y = [];
 var x = [];
 var aLines;
 var pLines;
+var words = [];
 var button;
 let pos = 100;
 var blur;
@@ -33,6 +34,14 @@ function draw() {
 //  background(255);
   showResetButton();
 
+
+    for (var w = words.length - 1; w >= 0; w--) {
+    words[w].display();
+    words[w].move();
+    //  if (words[w].isOffScreen()) {
+    // words.splice(w, 1);
+    //  }
+  }
     for(let y=0; y<height; y++){
     n = map(y,0,height,0,1);
     let newc = lerpColor(c1,c2,n);
@@ -84,6 +93,33 @@ function mouseWheel(event) {
   pos -= event.delta;
   //uncomment to block page scrolling
   return false;
+}
+
+function makeWord() {
+  words.push(new Word());
+  console.log(words.length);
+}
+
+class Word {
+  constructor() {
+    this.x = random(width);
+    this.y = 0;
+    this.speed = 1;
+    this.l = random(poemWords);
+  }
+
+  move() {
+    this.y += this.speed;
+  }
+  display() {
+    fill(100, 20, 50);
+    text(this.l, this.x, this.y);
+  }
+  isOffScreen() {
+    if (this.y > height) {
+      return true;
+    }
+  }
 }
 
 function showResetButton() {
