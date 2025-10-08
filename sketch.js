@@ -26,7 +26,8 @@ function draw() {
 
   fill(255);
   textSize(25);
-  text('every poem is a love poem', width / 2, 50);
+  text('every poem is a love poem', 100, 50);
+  text('Anita Solak & Panda Wong', 100, 70);
 
   for (var i = 0; i < aLines.length; i++) {
     y = y - (mouseX / 1500) * 0.1;
