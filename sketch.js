@@ -5,7 +5,6 @@ var y = [];
 var x = [];
 var aLines;
 var pLines;
-var words = [];
 var button;
 let pos = 100;
 var blur;
@@ -31,12 +30,6 @@ createCanvas(windowWidth, windowHeight);
 function draw() {
  background(bg);
   showResetButton();
-
-
-    for (var w = words.length - 1; w >= 0; w--) {
-    words[w].display();
-    words[w].move();
-  }
   
   fill(255);
   textSize(25);
@@ -82,33 +75,6 @@ function mouseWheel(event) {
   pos -= event.delta;
   //uncomment to block page scrolling
   return false;
-}
-
-function makeWord() {
-  words.push(new Word());
-  console.log(words.length);
-}
-
-class Word {
-  constructor() {
-    this.x = random(width);
-    this.y = 0;
-    this.speed = 1;
-    this.l = random(poemWords);
-  }
-
-  move() {
-    this.y += this.speed;
-  }
-  display() {
-    fill(100, 20, 50);
-    text(this.l, this.x, this.y);
-  }
-  isOffScreen() {
-    if (this.y > height) {
-      return true;
-    }
-  }
 }
 
 function showResetButton() {
