@@ -22,6 +22,7 @@ createCanvas(windowWidth, windowHeight);
 
 function draw() {
  background(bg);
+  cursor('pinkheart_busy.ani');
 
   fill(255);
   textSize(25);
