@@ -26,15 +26,15 @@ function draw() {
 
   fill(255);
   textSize(25);
-  text('every poem is a love poem', 100, 50);
-  text('Anita Solak & Panda Wong', 100, 70);
+  text('every poem is a love poem', width / 2, 50);
+  text('Anita Solak & Panda Wong', width / 2, 70);
 
   for (var i = 0; i < aLines.length; i++) {
     y = y - (mouseX / 1500) * 0.1;
     
     textFont("Garamond");
     textAlign(LEFT);
-    text(aLines[i], 100, pos + i * 20);
+    text(aLines[i], 100, pos + i * 30);
   }
 
     for (var i = 0; i < pLines.length; i++) {
@@ -42,7 +42,7 @@ function draw() {
     
     textFont("Garamond");
     textAlign(RIGHT);
-    text(pLines[i], 1300, pos + i * 20);
+    text(pLines[i], 1300, pos + i * 30);
   }
 }
 
