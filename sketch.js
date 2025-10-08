@@ -5,10 +5,8 @@ var y = [];
 var x = [];
 var aLines;
 var pLines;
-var button;
 let pos = 100;
 var R, G, B;
-var restartText;
 let bg;
 
 function preload() {
@@ -25,12 +23,9 @@ createCanvas(windowWidth, windowHeight);
 
 function draw() {
  background(bg);
-  showResetButton();
-  
+
   fill(255);
   textSize(25);
-  text('LEFT 4 SLOW', 10, 400);
-  text('RIGHT 4 FAST', width - 170, 400);
   text('every poem is a love poem', width / 2, 50);
 
   for (var i = 0; i < aLines.length; i++) {
@@ -56,22 +51,4 @@ function mouseWheel(event) {
   pos -= event.delta;
   //uncomment to block page scrolling
   return false;
-}
-
-function showResetButton() {
-  button = createButton("back 2 beginning pls");
-  //button.position(width - 250, 160, 65);
-  button.position(10, 70);
-
-  button.style("background-color", "transparent");
-  button.style("color", "rgb(255, 255, 255)");
-  button.style("font-size", "20pt");
-
-  button.style("border", "1px solid #326464");
-  button.style("border-radius", "5px");
-  button.mousePressed(resetPoem);
-}
-
-function resetPoem() {
-  pos = 0;
 }
