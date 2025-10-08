@@ -58,14 +58,14 @@ function draw() {
       fill(R, G, B);
     }
     blur.fill(R, G, B, 10);
-    blur.textAlign(LEFT);
+    blur.textAlign(RIGHT);
     blur.textSize(35);
     blur.textFont("Garamond");
     blur.text(pLines[i], 350 + i + shake, pos + i * 20 + shake);
   }
   for (var i = 0; i < pLines.length; i++) {
     blur.fill(245, 222, 179, 10);
-    blur.textAlign(LEFT);
+    blur.textAlign(RIGHT);
     blur.textSize(25);
     blur.text(pLines[i], 350, y + i * 20);
   }
